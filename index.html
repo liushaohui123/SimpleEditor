@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+		<script type="text/javascript" language="JavaScript" src="js/editor/Editor.js"></script>
+		<script language="JavaScript" type="text/javascript" src="js/editorTool.js"></script>
+		<script language="JavaScript" type="text/javascript" src="jqueryui/jquery-1.8.3.js"></script>
+		<script language="JavaScript" type="text/javascript" src="jqueryui/jquery-ui.js"></script>
+		<script language="JavaScript" type="text/javascript" src="js/event.js"></script>
+		<script language="JavaScript" type="text/javascript" src="jqueryui/evol.colorpicker.js"></script>
+		<link type="text/css" rel="stylesheet" href="css/main.css">
+		<link type="text/css" rel="stylesheet" href="jqueryui/jquery-ui.css">
+		<link href="jqueryui/evol.colorpicker.css" rel="stylesheet" type="text/css">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		<iframe name="hidden_iframe" style="display:none;">
+		</iframe>
+		<!--<button onclick="B()" unselectable="on" onmousedown="return false;"
+		 style="-webkit-user-select:none;-moz-user-select:none;">点击</button>
+		-->
+		<div class="main">
+		<!--按钮div-->
+		<div class="press-button">
+			<!--html-->
+			<div class="icons" unselectable="on" title="源代码" onmousedown="return false;">
+				<div unselectable="on" class="icons-html" id="icons-html"></div>
+			</div>
+			<!--后退-->
+			<div class="icons" unselectable="on" title="后退" onmousedown="return false;">
+				<div id="undo" unselectable="on" class="icons-undo"></div>
+			</div>
+			<!--前进-->
+			<div class="icons" unselectable="on" title="前进" onmousedown="return false;">
+				<div unselectable="on" class="icons-redo"  id="redo"></div>
+			</div>
+			<!--加粗-->
+			<div class="icons" unselectable="on" title="加粗"  onmousedown="return false;">
+				<div unselectable="on" class="icons-bold" id="bold" onmousedown="return false;"></div>
+			</div>
+			<!--斜体-->
+			<div class="icons" unselectable="on" title="斜体" onmousedown="return false;">
+				<div unselectable="on" class="icons-italic" id="italic"></div>
+			</div>
+			<!--下划线-->
+			<div class="icons" unselectable="on" title="下划线" onmousedown="return false;">
+				<div unselectable="on" class="icons-underline" id="underline"></div>
+			</div>
+			<!--删除线-->
+			<div class="icons" unselectable="on" title="删除线" onmousedown="return false;">
+				<div unselectable="on" class="icons-strikethrough" id="strikethrough"></div>
+			</div>
+			<!--颜色-->
+			<div class="color" unselectable="on" title="字体颜色" id="select-color">
+				<input unselectable="on" style="width:100px;" id="foreColor" class="colorPicker evo-cp0" />
+			</div>
+			<!--背景色-->
+			<div class="color" unselectable="on" title="背景颜色" id="select-background">
+				<input unselectable="on" style="width:100px;" id="backColor" class="colorPicker evo-cp0" />
+			</div>
+			<!--清除格式-->
+			<div class="icons" unselectable="on" title="清除格式" onmousedown="return false;">
+				<div unselectable="on" class="icons-RemoveFormat" id="RemoveFormat"></div>
+			</div>
+			<!--有序列表-->
+			<div class="icons" unselectable="on" title="有序列表" onmousedown="return false;">
+				<div unselectable="on" class="icons-ol" id="InsertOrderedList"></div>
+			</div>
+			<!--无序列表-->
+			<div class="icons" unselectable="on" title="无序列表" onmousedown="return false;">
+				<div unselectable="on" class="icons-ul" id="InsertUnorderedList"></div>
+			</div>
+			<!--全选-->
+			<div class="icons" unselectable="on" title="全选" onmousedown="return false;">
+				<div unselectable="on" class="icons-SelectAll" id="SelectAll"></div>
+			</div>
+			<!--清空文档-->
+			<div class="icons" title="清空文档" unselectable="on">
+				<div class="icons-clear" id="icons-clear" unselectable="on"></div>
+			</div>
+			<!--左对齐-->
+			<div class="icons" unselectable="on" title="左对齐" onmousedown="return false;">
+				<div unselectable="on" class="icons-left" id="justifyLeft"></div>
+			</div>
+			<!--居中对齐-->
+			<div class="icons" unselectable="on" title="居中对齐" onmousedown="return false;">
+				<div unselectable="on" class="icons-center" id="justifyCenter"></div>
+			</div>
+			<!--右对齐-->
+			<div class="icons" unselectable="on" title="右对齐" onmousedown="return false;">
+				<div unselectable="on" class="icons-right" id="justifyRight"></div>
+			</div>
+			<!--分割线-->
+			<div class="icons" unselectable="on" title="分割线" onmousedown="return false;">
+				<div unselectable="on" class="icons-InsertHorizontalRule" id="InsertHorizontalRule"></div>
+			</div>
+			<!--删除符-->
+			<div class="icons" unselectable="on" title="删除" onmousedown="return false;">
+				<div unselectable="on" class="icons-delete" id="delete"></div>
+			</div>
+			<!--超链接-->
+			<div class="icons" unselectable="on" title="超链接" onmousedown="return false;">
+				<div unselectable="on" class="icons-CreateLink" id="CreateLink"></div>
+			</div>
+			<!--删除超链接-->
+			<div class="icons" unselectable="on" title="取消超链接" onmousedown="return false;">
+				<div unselectable="on" class="icons-unlink" id="unlink"></div>
+			</div>
+			<!--段落格式-->
+			<div class="select" unselectable="on" title="段落格式" id="select-heading">
+				<select unselectable="on" onselectstart="return false;" id="heading">
+					<option value="p">p</option>
+					<option value="h1">h1</option>
+					<option value="h2">h2</option>
+					<option value="h3">h3</option>
+					<option value="h4">h4</option>
+					<option value="h5">h5</option>
+					<option value="h6">h6</option>
+				</select>
+			</div>
+			<!--字体-->
+			<div class="select" unselectable="on" title="字体" id="select-font">
+				<select unselectable="on" id="fontName" onselectstart="return false;">
+					<option value="宋体">宋体</option>
+					<option value="楷体">楷体</option>
+					<option value="微软雅黑">微软雅黑</option>
+					<option value="黑体">黑体</option>
+					<option value="arial">arial</option>
+					<option value="impact">impact</option>
+				</select>
+			</div>
+			<!--字号-->
+			<div class="select"  unselectable="on"  title="字体大小" id="select-size">
+				<select  id="fontSize" onselectstart="return false;" unselectable="on">
+					<option value= "1">1</option>
+					<option value= "2">2</option>
+					<option value= "3">3</option>
+					<option value= "4">4</option>
+					<option value= "5">5</option>
+					<option value= "6">6</option>
+					<option value= "7">7</option>
+				</select>
+			</div>
+			<!--上传图片，并将更新页面指向框架，使本页面不刷新-->
+			<div class="icons-upload" unselectable="on">
+			<form id="upload" action="upload/upload.php" unselectable="on" enctype="multipart/form-data" target="hidden_iframe" method="post">
+				<input type="file" id="file" unselectable="on"  name="upfile">
+				<input type="submit" value="加载" unselectable="on" onclick="return checkType()">
+			</form>
+			</div>
+			<form id="generateword" action="word/wordFactory.php" target="_blank" method="post">
+				<input type="hidden" name="html">
+				<input type="submit">
+			</form>
+		</div>
+		<div contenteditable="true" id="editor" class="editor"></div>
+		<div contenteditable="true" id="editor-html" class="editor-html"></div>
+		</div>
+		<div>
+			<iframe name="word" style="display:none;"></iframe>
+		</div>
+		<div id="link">
+			 <table>
+			 	<tr><td>链接名称</td><td><input type="text" id="linkName"></td></tr>
+			 	<tr><td>链接地址</td><td><input type="text" id="linkSrc"></td></tr>
+			 </table>
+			 <p>是否在新窗口打开&nbsp;&nbsp;&nbsp;<input id="isBlank" type="checkbox"></p>
+		</div>
+	</body>
+</html>

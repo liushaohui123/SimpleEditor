@@ -1,0 +1,258 @@
+@CHARSET "UTF-8";
+*{
+	margin:0px;
+	padding:0px;
+}
+/*
+#decoration{
+	text-decoration:none !important;
+}
+*/
+.main{
+	width:800px;
+	margin:0px auto;
+}
+.press-button{
+	width:800px;
+}
+/*
+按钮位置
+*/
+.icons{
+	display:inline-block;
+	*display: inline;
+ 	zoom: 1; 
+	padding:2px;
+	margin:0px 1px;
+	
+}
+.icons:hover{
+	display:inline-block;
+	*display: inline;
+ 	zoom: 1; 
+	padding:2px;
+	margin:0px 1px;
+	background-color:#e7bd18;
+}
+.iframe{
+	border:0px;
+	min-width:410px;
+	min-height:270px;
+}
+.icons-click{
+	display:inline-block;
+	*display: inline;
+ zoom: 1; 
+	padding:2px;
+	margin:0px 1px;
+	background-color:#e7bd18;;
+}
+.icons-ban{
+	display:inline-block;
+	*display: inline;
+ zoom: 1; 
+	padding:2px;
+	margin:0px 1px;
+	background-color:#ffffff;
+	filter:alpha(opacity=50);
+	opacity:0.5;
+	-moz-opacity:0.5;
+}
+/*html按钮*/
+.icons-html{
+	background-image:url(../image/icons.png);
+	background-position:-260px 0px;
+	width:20px;
+	height:20px;
+	background-repeat:no-repeat;
+}
+/*后退按钮*/
+.icons-undo{
+	background-image:url(../image/icons.png);
+	background-position:-160px 0px;
+	width:20px;
+	height:20px;
+	background-repeat:no-repeat;
+}
+/*前进按钮*/
+.icons-redo{
+	background-image:url(../image/icons.png);
+	background-position:-100px 0px;
+	width:20px;
+	height:20px;
+	background-repeat:no-repeat;
+}
+/*加粗按钮*/
+.icons-bold{
+	background-image:url(../image/icons.png);
+	background-position:0px 0px;
+	width:20px;
+	height:20px;
+	background-repeat:no-repeat;
+}
+/*斜体按钮*/
+.icons-italic{
+	background-image:url(../image/icons.png);
+	background-position:-60px 0px;
+	width:20px;
+	height:20px;
+	background-repeat:no-repeat;
+}
+/*下划线*/
+.icons-underline{
+	background-image:url(../image/icons.png);
+	background-position:-140px 0px;
+	width:20px;
+	height:20px;
+	background-repeat:no-repeat;
+}
+/*删除线*/
+.icons-strikethrough{
+	background-image:url(../image/icons.png);
+	background-position:-120px 0px;
+	width:20px;
+	height:20px;
+	background-repeat:no-repeat;
+}
+/*清除格式*/
+.icons-RemoveFormat{
+	background-image:url(../image/icons.png);
+	background-position:-580px 0px;
+	width:20px;
+	height:20px;
+	background-repeat:no-repeat;
+}
+/*有序列表*/
+.icons-ol{
+	background-image:url(../image/icons.png);
+	background-position:-80px 0px;
+	width:20px;
+	height:20px;
+	background-repeat:no-repeat;
+}
+/*无序列表*/
+.icons-ul{
+	background-image:url(../image/icons.png);
+	background-position:-20px 0px;
+	width:20px;
+	height:20px;
+	background-repeat:no-repeat;
+}
+/*全选*/
+.icons-SelectAll{
+	background-image:url(../image/icons.png);
+	background-position:-400px -20px;
+	width:20px;
+	height:20px;
+	background-repeat:no-repeat;
+}
+/*清空文档*/
+.icons-clear{
+	background-image:url(../image/icons.png);
+	background-position:-520px 0px;
+	width:20px;
+	height:20px;
+	background-repeat:no-repeat;
+}
+/*超链接*/
+.icons-CreateLink{
+	background-image:url(../image/icons.png);
+	background-position:-500px 0px;
+	width:20px;
+	height:20px;
+	background-repeat:no-repeat;
+}
+/*取消超链接*/
+.icons-unlink{
+	background-image:url(../image/icons.png);
+	background-position:-640px 0px;
+	width:20px;
+	height:20px;
+	background-repeat:no-repeat;
+}
+/*左对齐*/
+.icons-left{
+	background-image:url(../image/icons.png);
+	background-position:-460px 0px;
+	width:20px;
+	height:20px;
+	background-repeat:no-repeat;
+}
+/*居中*/
+.icons-center{
+	background-image:url(../image/icons.png);
+	background-position:-420px 0px;
+	width:20px;
+	height:20px;
+	background-repeat:no-repeat;
+}
+/*右对齐*/
+.icons-right{
+	background-image:url(../image/icons.png);
+	background-position:-480px 0px;
+	width:20px;
+	height:20px;
+	background-repeat:no-repeat;
+}
+/*分割线*/
+.icons-InsertHorizontalRule{
+	background-image:url(../image/icons.png);
+	background-position:-360px 0px;
+	width:20px;
+	height:20px;
+	background-repeat:no-repeat;
+}
+/*删除符*/
+.icons-delete{
+	background-image:url(../image/icons.png);
+	background-position:-360px -40px;
+	width:20px;
+	height:20px;
+	background-repeat:no-repeat;
+}
+/*颜色*/
+.color{
+	display:inline-block;
+	*display:inline;
+	zoom: 1; 
+	padding:1px;
+	margin:0px 1px;
+	position:relative;
+	top:-5px;
+}
+/*下拉框*/
+.select{
+	display:inline-block;
+	*display:inline;
+	zoom: 1; 
+	padding:1px;
+	margin:0px 1px;
+}
+.icons-upload{
+	display:inline-block;
+	*display:inline;
+	zoom: 1; 
+	padding:1px;
+	margin:0px 1px;
+	position:relative;
+	top:-7px;
+}
+/*编辑框*/
+.editor{
+	border:1px solid #c0c0c0;
+	width:800px;
+	height:400px;
+	display:block;
+	padding:30px;
+	word-break:break-all;
+	overflow-y:scroll;
+}
+/*html编辑框*/
+.editor-html{
+	border:1px solid #c0c0c0;
+	width:800px;
+	height:400px;
+	display:none;
+	word-break:break-all;
+	overflow-y:scroll;
+}
