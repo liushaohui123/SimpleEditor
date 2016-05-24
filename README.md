@@ -4,7 +4,9 @@ simple editor
 这是一个简单的 [所见即所得](https://zh.wikipedia.org/zh/所見即所得 ) 文本编辑器
 
 1. 界面
+
 ![界面](./image/editor.png)
+
 2. 优点
 * 代码少  
 
