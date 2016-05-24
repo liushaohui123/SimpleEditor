@@ -5,16 +5,16 @@ simple editor
 
 1. 界面
 
-![界面](./image/editor.png)
+	![界面](./image/editor.png)
 
 2. 优点
-* 代码少  
+	* 代码少  
 
-核心文件只有*4*个，分别是index.html,/js/event.js,/js/editorTool.js,/js/editor/Editor.js
+	核心文件只有*4*个，分别是index.html,/js/event.js,/js/editorTool.js,/js/editor/Editor.js
 
-* 兼容性
+	* 兼容性
 
-兼容ie9及以上，firefox，chrome，opera 
+	兼容ie9及以上，firefox，chrome，opera 
 
 3. 核心代码
 ```js
